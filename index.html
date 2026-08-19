@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VoiceText - Text to Speech</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="static/css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+
+            <div>
+                <h2>VoiceText</h2>
+                <span>Text to Speech</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="#" class="nav-item active">
+                <i class="fa-solid fa-microphone"></i>
+                <span>Text to Speech</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>History</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>About</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>English & Nepali</p>
+            <small>VoiceText v1.0</small>
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Text to Speech</h1>
+                <p>Convert your text into natural speech.</p>
+            </div>
+
+            <button class="theme-btn" id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </header>
+
+        <section class="content">
+
+            <div class="card text-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Your Text</h2>
+                        <p>Enter English or Nepali text below.</p>
+                    </div>
+
+                    <div class="language-box">
+
+                        <label for="language">Language</label>
+
+                        <select id="language">
+                            <option value="en-US">🇬🇧 English</option>
+                            <option value="ne-NP">🇳🇵 नेपाली</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <textarea
+                    id="textInput"
+                    placeholder="Type or paste your text here..."
+                    maxlength="5000"></textarea>
+
+                <div class="text-footer">
+                    <span id="characterCount">0 / 5000 characters</span>
+
+                    <button id="clearBtn" class="clear-btn">
+                        <i class="fa-solid fa-trash"></i>
+                        Clear
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card settings-card">
+
+                <div class="card-header">
+                    <div>
+                        <h2>Voice Settings</h2>
+                        <p>Customize how your text sounds.</p>
+                    </div>
+                </div>
+
+                <div class="settings-grid">
+
+                    <div class="setting">
+                        <label for="voice">Voice</label>
+                        <select id="voice">
+                            <option>Loading voices...</option>
+                        </select>
+                    </div>
+
+                    <div class="setting">
+                        <label for="speed">Speed <span id="speedValue">1.0x</span></label>
+                        <input type="range" id="speed" min="0.5" max="2" step="0.1" value="1">
+                    </div>
+
+                    <div class="setting">
+                        <label for="pitch">Pitch <span id="pitchValue">1.0</span></label>
+                        <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+                    </div>
+
+                    <div class="setting">
+                        <label for="volume">Volume <span id="volumeValue">100%</span></label>
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card player-card">
+
+                <div class="player-info">
+                    <div class="sound-icon">
+                        <i class="fa-solid fa-wave-square"></i>
+                    </div>
+
+                    <div>
+                        <h3>Speech Preview</h3>
+                        <p id="status">Ready to convert your text</p>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress"></div>
+                    </div>
+                </div>
+
+                <div class="player-controls">
+
+                    <button id="playBtn" class="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                        <span>Convert & Play</span>
+                    </button>
+
+                    <button id="pauseBtn" class="control-btn">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+
+                    <button id="stopBtn" class="control-btn">
+                        <i class="fa-solid fa-stop"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="static/js/app.js"></script>
+
+</body>
+</html>
