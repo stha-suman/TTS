@@ -424,6 +424,120 @@ body.dark .control-btn:hover {
 }
 
 
+/* Footer */
+
+.site-footer {
+    max-width: 1100px;
+    margin: 45px auto 0;
+    padding: 42px 38px 18px;
+    border-radius: 18px 18px 0 0;
+    background: #111827;
+    color: #f9fafb;
+    box-shadow: 0 -12px 35px rgba(17, 24, 39, 0.12);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.2fr 1.4fr;
+    gap: 35px;
+    padding-bottom: 32px;
+}
+
+.footer-column h3,
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.footer-column p,
+.footer-column a {
+    color: #9ca3af;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer-column ul {
+    display: grid;
+    gap: 8px;
+    list-style: none;
+}
+
+.footer-column a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    display: flex;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #374151;
+    border-radius: 9px;
+    color: #d1d5db;
+}
+
+.social-links a:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+
+.footer-contact p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.footer-contact i {
+    width: 14px;
+    color: #818cf8;
+    text-align: center;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #273244;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 22px;
+}
+
+.footer-bottom a {
+    color: #9ca3af;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+body.dark .site-footer {
+    box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
 /* Responsive */
 
 @media (max-width: 800px) {
@@ -471,4 +585,31 @@ body.dark .control-btn:hover {
         width: 100%;
     }
 
+    .site-footer {
+        padding: 32px 24px 18px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 22px;
+    }
+
 }
+
+@media (max-width: 520px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+}
+
